@@ -1,15 +1,18 @@
 #include<stdio.h>
-#include<math.h>
     void main(){
-        int n,i,j;
+        int n,i,j,x,y=0,z;
         scanf("%d",&n);
-        x = ceil(n/2);
-        y = floor(n/2);
+        x=n/2;
+        y=n;
+        if(n%2!=0){
+            x++;
+        }
         if(n>=1&&n<=1000){
             for( i=0 ; i<x ; i++ ){
-                for( j=0 ; j<n ; j++ ){
-                    if
+                for( j=x-1 ; j>0 ; j-- ){
+                    printf("_");
                 }
+                printf("\n");
             }
         }
     }
