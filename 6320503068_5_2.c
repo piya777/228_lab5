@@ -11,8 +11,7 @@
             x=(n+1)/2;
             y=n;
         }
-        for(i=0; i<x; i++)
-        {
+        for(i=0; i<x; i++){
             for(j=0;j<y;j++){
                 if(j==x+i-1||j==x-i-1){
                     printf("*");
@@ -23,8 +22,7 @@
             }
             printf("\n");
         }
-        for(i=x; i>0; i--)
-        {
+        for(i=x; i>0; i--){
             for(j=y;j>0;j--){
                 if(j==x-i+1||j==x+i-1){
                     printf("*");
