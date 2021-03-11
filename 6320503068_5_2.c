@@ -1,38 +1,26 @@
 #include<stdio.h>
+
     void main(){
-        int n,i,x,y,s1,j,s2,check=0;
+        int n,i,j,x,y;
         scanf("%d",&n);
         if(n%2==0){
             x=n/2;
-            y=2;
+            y=n-1;
         }
         else{
-            x=(n/2)+1;
-            y=1;
+            x=(n+1)/2;
+            y=n;
         }
-        if(n>=1&&n<=1000){
-            for( i=0 ; i<x ; i++ ){
-                for( j=1 ; j<n ; j++ ){
-                    if(j%x==0){
-                        printf("*");
-                    }
-                    else{
-                        printf("_");
-                    }
+        for(i=0; i<x; i++)
+        {
+            for(j=0;j<y;j++){
+                if(j==x+i-1||j==x-i-1){
+                    printf("*");
                 }
-                printf("\n");
-                x--;
-            }
-            for( i=0 ; i<x+1 ; i++ ){
-                for( j=0 ; j<=n ; j++ ){
-                    if(j==0||j==n-2){
-                        printf("*");
-                    }
-                    else{
-                        printf("_");
-                    }
+                else{
+                    printf("_");
                 }
-                printf("\n");
             }
+            printf("\n");
         }
     }
